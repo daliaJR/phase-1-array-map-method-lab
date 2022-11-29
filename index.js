@@ -12,5 +12,31 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map((tutorial) => {
+    let words = tutorial.split(" ");
+    console.log(words);
+    let wordsArr = words.map((word) => word.charAt(0).toUpperCase() + word.slice(1));
+    let newArr = wordsArr.join(" ");
+    return newArr;
+  });
 }
+
+
+
+/*
+
+const titleCased = tutorials.map((tutorial) => {
+  let words = tutorial.split(" ");
+  console.log(words);
+  let wordsArr = words.map((word) => {
+    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+   
+  })
+  // let newArr = wordsArr.map(word => {
+  //   word.join(" ");
+  // })
+  // console.log(wordsArr.join(" "));
+  return words;
+});
+
+*/
